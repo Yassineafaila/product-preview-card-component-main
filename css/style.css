@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+}
+img,svg{
+    max-width: 100%;
+    display: block;
+}
+:root{
+    --Primary-Dark-cyan: hsl(158, 36%, 37%);
+    --Primary-Cream: hsl(30, 38%, 92%);
+
+    --Neutral-Very-dark-blue: hsl(212, 21%, 14%);
+    --Neutral-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --Neutral-White: hsl(0, 0%, 100%);
+
+    --ff-title:'Montserrat', sans-serif;
+    --ff-text: 'Fraunces', serif;
+
+    --fw-medieum:500;
+    --fw-bold:700;
+}
+body{
+    height: 100vh;
+    background-color: var(--Primary-Cream);
+}
+.container{
+
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    background-color:var(--Neutral-White);
+}
+.img-container{
+    width: 100%;
+    object-fit: cover;
+}
+.img-container img.img__mobile{
+    border-top-left-radius: 0.8rem;
+    border-top-right-radius: 0.8rem;
+}
+.img-container img.img__desktop{
+    display: none;
+
+}
+.card__content{
+    padding: 1rem;
+}
+.sub__title{
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: var(--Neutral-Dark-grayish-blue);
+    font-size: 1rem;
+}
+.title__product{
+    font-family: var(--ff-text);
+    margin:1rem 0;
+    font-size: 2.1875rem;
+    font-weight: var(--fw-bold);
+    color: var(--Neutral-Very-dark-blue);
+}
+.description__product{
+    color: var(--Neutral-Dark-grayish-blue);
+    font-family: var(--ff-title);
+    font-size: 0.9675rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.New__prix{
+    font-family: var(--ff-text);
+    font-size: 2.375rem;
+    color: var(--Primary-Dark-cyan);
+}
+.Old__prix{
+    font-family: var(--ff-title);
+    color: var(--Neutral-Dark-grayish-blue);
+    flex: 1;
+    margin-left: 0.9375rem;
+    text-decoration: line-through;
+}
+.btn{
+    width: 100%;
+    background-color: var(--Primary-Dark-cyan);
+    color: var(--Neutral-White);
+    font-family: var(--ff-title);
+    font-size: 1.1rem;
+    font-weight: var(--fw-bold);
+    padding: 1rem;
+    position: relative;
+    border-radius: 0.8rem;
+    -webkit-border-radius: 0.8rem;
+    -moz-border-radius: 0.8rem;
+    -ms-border-radius: 0.8rem;
+    -o-border-radius: 0.8rem;
+    transition: all ease-in-out .3s;
+    cursor: pointer;
+    -webkit-transition: all ease-in-out .3s;
+    -moz-transition: all ease-in-out .3s;
+    -ms-transition: all ease-in-out .3s;
+    -o-transition: all ease-in-out .3s;
+}
+.btn::before{
+    content: "";
+    background: url("/images/icon-cart.svg") no-repeat no-repeat ;
+    position: absolute;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 22%;
+    width: 1.375rem;
+    height: 1.5rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.btn:hover{
+    background-color:  hsl(158, 43%, 24%);
+    color: var(--Neutral-White);
+}
+@media screen and (max-width:991px){
+    .container{
+        width: 23.4375rem;
+    }
+}
+@media screen and (min-width:992px) {
+    .container{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        width: 49.5rem;
+        max-height: 100%;
+        gap: 20px;
+    }
+    .img-container{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .img-container img.img__desktop{
+        height: 100%;
+        display: block !important;
+        border-top-left-radius: 0.8rem;
+        border-top-right-radius:0 ;
+        border-bottom-left-radius: 0.8rem;
+    }
+    .img-container img.img__mobile{
+        display: none !important;
+}
+
+    .content{
+        padding: 1.7rem;
+    }
+    .sub__title{
+        font-size: 1.2rem;
+    }
+    .title__product{
+        font-size: 3rem;
+        line-height: 1.3;
+        margin-bottom: 0 !important;
+    }
+    .description__product{
+        font-size:1rem;
+        margin-top: 1.2rem;
+    }
+    .New__prix{
+        font-size:2.375rem ;
+
+    }
+    .btn{
+        padding: 0.9rem !important;
+    }
+
+}
